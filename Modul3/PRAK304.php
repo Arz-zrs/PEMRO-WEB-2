@@ -1,6 +1,5 @@
 <?php
-    $count = 0;
-    $count =  $_POST['num'] ?? 0;
+    $count = $_POST['num'] ?? 0;
 
     if (isset($_POST['action'])) {
         if ($_POST['action'] == 'increment') {
