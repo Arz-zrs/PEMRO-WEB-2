@@ -20,12 +20,14 @@
     <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $jumlahPeserta = $_POST['num'];
-            for ($i = 1; $i <= $jumlahPeserta; $i++) {
+            $i = 1;
+            while ($i <= $jumlahPeserta) {
                 if ($i % 2 == 0) {
                     echo "<h2 class='even'>Peserta ke-$i</h2>";
                 } else {
                     echo "<h2 class='odd'>Peserta ke-$i</h2>";
                 }
+                $i++;
             }
         }
     ?>
