@@ -11,7 +11,7 @@
     }
 
     $isSubmitted = isset($_POST['action']);    
-    $image = "https://www.freepnglogos.com/uploads/star-png/file-featured-article-star-svg-wikimedia-commons-8.png";
+    $image = "star.png";
 ?>
 
 <style>

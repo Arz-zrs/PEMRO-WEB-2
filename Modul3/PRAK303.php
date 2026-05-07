@@ -11,7 +11,7 @@
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $min = $_POST['min'];
             $max = $_POST['max'];
-            $image = "https://www.freepnglogos.com/uploads/star-png/file-featured-article-star-svg-wikimedia-commons-8.png";
+            $image = "star.png";
 
             do {
                 if (($min+7) % 5 == 0) {
