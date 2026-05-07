@@ -13,6 +13,8 @@
     $image = "star.png";
 ?>
 
+<html>
+<head>
 <style>
     #inputForm {
         display: <?php echo $isSubmitted ? 'none' : 'block'; ?>;
@@ -22,7 +24,8 @@
         display: <?php echo $isSubmitted ? 'block' : 'none'; ?>;
     }
 </style>
-
+</head>
+<body>
 <div id="inputForm">
     <form method="post">
         <label for="num">Jumlah bintang </label>
@@ -45,3 +48,5 @@
         <button type="submit" name="action" value="decrement">Kurang</button>
     </form>
 </div>
+</body>
+</html>
