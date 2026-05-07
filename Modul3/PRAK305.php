@@ -7,6 +7,11 @@
     if (isset($_POST['submit'])) {
         $text = $_POST['text'];
         $length = strlen($text);
+
+        echo "<h2>Input</h2>";
+        echo "$text <br>";
+
+        echo "<h2>Output</h2>";
         for ($i = 0; $i < $length; $i++) {
             $char = $text[$i];
             $repeat = str_repeat($char, $length);
