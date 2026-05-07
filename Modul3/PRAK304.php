@@ -28,7 +28,7 @@
     <form method="post">
         <label for="num">Jumlah bintang </label>
         <input type="number" name="num" id="num"> <br>
-        <input type="submit" name="submit" value="Submit"> <br>
+        <input type="submit" name="action" value="Submit"> <br>
     </form>
 </div>
 
