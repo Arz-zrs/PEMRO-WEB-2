@@ -13,7 +13,7 @@
 
         echo "<h2>Output</h2>";
         for ($i = 0; $i < $length; $i++) {
-            $char = $text[$i];
+            $char = strtolower($text[$i]);
             $repeat = str_repeat($char, $length);
             echo ucfirst($repeat);
         }
