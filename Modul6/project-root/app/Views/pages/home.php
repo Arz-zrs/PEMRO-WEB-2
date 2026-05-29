@@ -11,7 +11,7 @@
 
                 <div class="d-flex align-items-center gap-3 mb-3">
                     <img src="<?= esc($profile['gambar']) ?>" alt="Profile photo of <?= esc($profile['nama']) ?>"
-                        class="rounded-circle border border-3 border-primary" width="60" height="60">
+                        class="rounded-circle border border-3 border-seconndary" width="60" height="60">
                     <div>
                         <h5 class="mb-0 fw-semibold"><?= esc($profile['nama']) ?></h5>
                         <span class="badge bg-secondary"><?= esc($profile['nim']) ?></span>
