@@ -3,7 +3,7 @@
 
         <div class="text-center mb-4">
             <h1 class="fw-bold">Welcome, Visitor</h1>
-            <p class="text-muted">Profil Singkat Saya.</p>
+            <p class="text-body-secondary">Profil Singkat Saya.</p>
         </div>
 
         <div class="card shadow-sm border-0">

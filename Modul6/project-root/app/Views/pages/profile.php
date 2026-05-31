@@ -3,7 +3,7 @@
 
         <div class="text-center mb-4">
             <h1 class="fw-bold">Profile</h1>
-            <p class="text-muted">Profil Saya.</p>
+            <p class="text-body-secondary">Profil Saya.</p>
         </div>
 
         <div class="card shadow-sm border-0">
@@ -26,14 +26,14 @@
                     <tbody>
 
                         <tr>
-                            <th class="text-muted" style="width:35%">
+                            <th class="text-body-secondary" style="width:35%">
                                 Program Studi
                             </th>
                             <td><?= esc($profile['prodi']) ?></td>
                         </tr>
 
                         <tr>
-                            <th class="text-muted align-top">
+                            <th class="text-body-secondary align-top">
                                 Hobi
                             </th>
                             <td>
@@ -46,7 +46,7 @@
                         </tr>
 
                         <tr>
-                            <th class="text-muted align-top">
+                            <th class="text-body-secondary align-top">
                                 Skill
                             </th>
                             <td>
@@ -59,7 +59,7 @@
                         </tr>
 
                         <tr>
-                            <th class="text-muted align-top">
+                            <th class="text-body-secondary align-top">
                                 Pengalaman Organisasi
                             </th>
                             <td>
@@ -67,14 +67,14 @@
                                     <?php if (isset($exp['organisasi'])): ?>
                                         <div class="mb-2">
                                             <strong><?= esc($exp['organisasi']) ?></strong>
-                                            <span class="text-muted">-<br> <?= esc($exp['posisi']) ?></span>
+                                            <span class="text-body-secondary">-<br> <?= esc($exp['posisi']) ?></span>
                                         </div>
                                     <?php endif; ?>
                                 <?php endforeach; ?>
                             </td>
                         </tr>
                         <tr>
-                            <th class="text-muted align-top">
+                            <th class="text-body-secondary align-top">
                                 Prestasi Lomba
                             </th>
                             <td>
@@ -82,7 +82,7 @@
                                     <?php if (isset($exp['lomba'])): ?>
                                         <div class="mb-2">
                                             <strong><?= esc($exp['lomba']) ?></strong>
-                                            <span class="text-muted">-<br> <?= esc($exp['prestasi']) ?></span>
+                                            <span class="text-body-secondary">-<br> <?= esc($exp['prestasi']) ?></span>
                                         </div>
                                     <?php endif; ?>
                                 <?php endforeach; ?>
