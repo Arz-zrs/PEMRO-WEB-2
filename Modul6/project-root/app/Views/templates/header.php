@@ -46,12 +46,10 @@
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link <?= (current_url(true)->getPath() === '/home') ? 'active' : '' ?>"
-                            href="/home">Home</a>
+                        <a class="nav-link <?= url_is('home') ? 'active' : '' ?>" href="/home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?= (current_url(true)->getPath() === '/profile') ? 'active' : '' ?>"
-                            href="/profile">Profile</a>
+                        <a class="nav-link <?= url_is('profile') ? 'active' : '' ?>" href="/profile">Profile</a>
                     </li>
                 </ul>
             </div>
