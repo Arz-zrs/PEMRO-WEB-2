@@ -57,8 +57,15 @@ class AuthController extends BaseController
         ];
 
         if (!$this->validate($rules)) {
-            $this->session->setFlashdata('old_email', $this->request->getPost('email'));
-            return redirect()->to('/login')->withInput();
+            $this->session->setFlashdata('_ci_old_input', $this->request->getPost());
+            $data = [
+                'title' => 'Login',
+                'error' => $this->session->getFlashdata('error'),
+                'success' => $this->session->getFlashdata('success'),
+                'old_email' => $this->request->getPost('email'),
+                'validation' => \Config\Services::validation()
+            ];
+            return view('auth/login', $data);
         }
 
         $email = $this->request->getPost('email');

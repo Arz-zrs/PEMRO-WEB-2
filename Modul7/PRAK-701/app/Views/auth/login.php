@@ -14,22 +14,15 @@
 
         <h1 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Login</h1>
 
-        <?php
-        $sudahSubmit = session()->getFlashdata('submitted');
-        $pesanFilter = session()->getFlashdata('error');
-        $pesanError = $error ?? null;
-        ?>
-
-        <?php if ($sudahSubmit && $pesanError): ?>
+        <?php if (!empty($error)): ?>
             <div class="mb-4 px-4 py-3 bg-red-50 border border-red-300 text-red-700 rounded-lg text-sm">
-                <?= esc($pesanError) ?>
+                <?= esc($error) ?>
             </div>
         <?php endif; ?>
 
-        <?php
-        if (!$sudahSubmit && $pesanFilter): ?>
-            <div class="mb-4 px-4 py-3 bg-yellow-50 border border-yellow-300 text-yellow-700 rounded-lg text-sm">
-                <?= esc($pesanFilter) ?>
+        <?php if (!empty($success)): ?>
+            <div class="mb-4 px-4 py-3 bg-green-50 border border-green-300 text-green-700 rounded-lg text-sm">
+                <?= esc($success) ?>
             </div>
         <?php endif; ?>
 

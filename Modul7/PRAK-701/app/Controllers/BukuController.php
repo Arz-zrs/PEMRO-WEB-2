@@ -80,7 +80,13 @@ class BukuController extends BaseController
         ];
 
         if (!$this->validate($rules)) {
-            return redirect()->to('/buku/create')->withInput();
+            // Store submitted input in session so old() helper can access it
+            $this->session->setFlashdata('_ci_old_input', $this->request->getPost());
+            $data = [
+                'title' => 'Tambah Buku',
+                'validation' => \Config\Services::validation(),
+            ];
+            return view('buku/create', $data);
         }
 
         $this->bukuModel->insert([
@@ -162,7 +168,14 @@ class BukuController extends BaseController
         ];
 
         if (!$this->validate($rules)) {
-            return redirect()->to('/buku/edit/' . $id)->withInput();
+            $buku = $this->bukuModel->find($id);
+            $this->session->setFlashdata('_ci_old_input', $this->request->getPost());
+            $data = [
+                'title' => 'Edit Buku',
+                'buku' => $buku,
+                'validation' => \Config\Services::validation(),
+            ];
+            return view('buku/edit', $data);
         }
 
         $this->bukuModel->update($id, [
