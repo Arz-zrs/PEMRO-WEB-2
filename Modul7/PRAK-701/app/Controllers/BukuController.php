@@ -80,7 +80,6 @@ class BukuController extends BaseController
         ];
 
         if (!$this->validate($rules)) {
-            // Store submitted input in session so old() helper can access it
             $this->session->setFlashdata('_ci_old_input', $this->request->getPost());
             $data = [
                 'title' => 'Tambah Buku',
