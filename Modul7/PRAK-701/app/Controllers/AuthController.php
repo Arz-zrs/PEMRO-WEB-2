@@ -18,7 +18,7 @@ class AuthController extends BaseController
 
     public function index()
     {
-        if ($this->session->get('user_id')) {
+        if ($this->session->get('logged_in')) {
             return redirect()->to('/buku');
         }
 
