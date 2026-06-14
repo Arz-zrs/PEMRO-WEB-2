@@ -80,7 +80,6 @@ class AuthController extends BaseController
 
         if (!password_verify($password, $user['password'])) {
             $this->session->setFlashdata('error', 'Email atau password salah.');
-            $this->session->setFlashdata('old_email', $email);
             return redirect()->to('/login');
         }
 
